@@ -1,0 +1,30 @@
+{
+  "name": "css_castle",
+  "version": "1.0.0",
+  "description": "A CSS illustration based off a poster by @playgroundinc @natekogan and build on CSS Grid",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.24.4",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jveens/css_castle.git"
+  },
+  "author": "Jenny Veens @jveens",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jveens/css_castle/issues"
+  },
+  "homepage": "https://github.com/jveens/css_castle#readme"
+}
