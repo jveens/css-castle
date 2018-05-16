@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    background-color: $bg;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 850px 1fr;
+    grid-template-columns: 1fr 1200px 1fr;
+    grid-gap: 0;
+}
+
+.ground {
+    background-color: $ground;
+    height: 30vh;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.castle {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    grid-template-rows: repeat(17, 1fr);
+}

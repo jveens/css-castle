@@ -1,0 +1,56 @@
+.keep {
+    grid-row: 7 / -2;
+    grid-column: 7 / -7;
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.block {
+    background-color: $aqua;
+    grid-column: span 2;
+    grid-row: 1 / span 2;
+    border-width: 50px;
+    border-style: solid;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: $royal;
+    border-right-color: $royal;
+
+    &--pink {
+        border-left-color: $lightpink;
+        border-right-color: $lightpink;
+    }
+
+    &--light-dark {
+        border-right-color: $navy;
+    }
+
+    &--dark-light {
+        border-left-color: $navy;
+    }
+
+    &-3 {
+        grid-column: 5 / span 2;
+    }
+
+    &-4 {
+        grid-column: 7 / span 2;
+    }
+
+}
+
+.small-eye {
+    grid-row: 1 / span 2;
+    grid-column: 6 / span 2;
+    background-color: $black;
+    border: 12px solid $white;
+    border-radius: 50%;
+    z-index: 10;
+    width: 63%;
+    height: 63%;
+    justify-self: center;
+    align-self: center;
+    position: relative;
+    top: 2px;
+}

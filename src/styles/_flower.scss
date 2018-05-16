@@ -1,0 +1,82 @@
+.flower {
+    background-color: forestgreen;
+    grid-row: -6 / span  5;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    &--left {
+        grid-column: 3 / span 2;
+    }
+
+    &--right {
+        grid-column: -5 / span 2;
+    }
+}
+
+.flower__details {
+    width: 120%;
+    background-color: $pink;
+    padding-bottom: 120%;
+    border-radius: 50%;
+    position: relative;
+    top: 15px;
+    margin-left: -10%;
+    position: relative;
+}
+
+.flower__blossom {
+    width: 14px;
+    height: 100%;
+    background-color: $lightpink;
+    position: absolute;
+    border-radius: 50%;
+    // border: 15px solid transparent;
+    background-clip: padding-box;
+    left: calc(50% - 7px);
+    z-index: 10;
+    
+    &:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: $lightpink;
+        border-radius: 50%;
+        background-clip: padding-box;
+        transform: rotate(0.25turn);
+        position: absolute;
+        display: block;
+    }
+
+    &--rotate {
+        transform: rotate(0.125turn);
+    }
+}
+
+.flower__stem {
+    width: 8px;
+    height: 100%;
+    background-color: $white;
+    align-self: center;
+    position: relative;
+
+    &:before, 
+    &:after {
+        content: '';
+        width: 30px;
+        height: 50px;
+        background-color: $white;
+        border-radius: 45%;
+        display: block;
+        position: absolute;
+        transform: rotate(0.35turn);
+        top: 20px;
+        left: -33px;
+    }
+
+    &:after {
+        transform: rotate(-0.35turn);
+        left: 11px;
+        top: 50px
+    }
+}
