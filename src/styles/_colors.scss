@@ -6,10 +6,12 @@ $ground: mix($white, plum, 20%);
 // Greens
 $green:      green;
 $green-1:    forestgreen;
+$limegreen:  limegreen;
 
 // Pinks
 $pink: mix(pink, $white);
-$pink-1: hotpink;
+$fuschia: fuchsia;
+$pink-1: mix(mix($fuschia, deeppink), $white, 65%);
 $lightpink: lightpink;
 $pink-3: deeppink;
 
@@ -20,3 +22,4 @@ $dodger: dodgerblue;
 $aqua: mix(aqua, $white, 60%);
 $royal: royalblue;
 $navy: navy;
+$indigo: indigo;
