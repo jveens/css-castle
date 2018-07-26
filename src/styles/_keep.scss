@@ -7,9 +7,10 @@
 }
 
 .block {
-    
     grid-column: span 2;
     grid-row: 1 / span 2;
+    border-left-color: $royal;
+    border-right-color: $royal;
     
     &.row-1 {
         border-top-width: 47px;
@@ -19,8 +20,6 @@
         border-style: solid;
         border-top-color: transparent;
         border-bottom-color: transparent;
-        border-left-color: $royal;
-        border-right-color: $royal;
         background-color: $aqua;
     }
 
@@ -121,6 +120,22 @@
         width: 70%;
         background-color: $white;
         background-image: repeating-linear-gradient($white 0px, $white, 15px, $lightsky 15px, $lightsky 30px);
+        position: relative;
+
+        &:after {
+            content: '';
+            width: calc(100% / 2.3);
+            height: 0;
+            padding-bottom: 40%;
+            display: block;
+            background-color: purple;
+            border-radius: 50% 50% 0 0;
+            box-shadow: 20px 0 0 0 purple,
+            40px 0 0 0 purple;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
     }
 }
 
@@ -141,4 +156,35 @@
     align-self: center;
     position: relative;
     top: 2px;
+}
+
+.wide-diamonds {
+    grid-column: span 3;
+    background-color: cyan;
+    grid-row: 5 / span 2;
+    position: relative;
+
+    &:last-child {
+        grid-column: span 3 / -1;
+    }
+
+    &:after,
+    &:before {
+        content: '▲';
+        width: 0;
+        height: 0;
+        display: block;
+        font-size: 28px;
+        transform: translate(2px) scaleY(1.5);
+        position: absolute;
+        left: 15%;
+        color: pink;
+        text-shadow: 40px 0 0 hotpink, 80px 0 0 deeppink;
+    }
+
+    &:before {
+        transform: translate(110px, 92px) scaleY(1.5) rotate(0.5turn);
+        text-shadow: 40px 0 0 hotpink, 80px 0 0 pink;
+        color: deeppink;
+    }
 }
